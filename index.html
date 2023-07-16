@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toast Notification or Snack Bar</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="buttons">
+      <button onclick="showToast()">Success</button>
+      <button onclick="showToast()">Error</button>
+      <button onclick="showToast()">Invalid</button>
+    </div>
+    <div id="toastBox"></div>
+
+    <!-- Main js  -->
+    <script>
+      const toastBox = document.getElementById("toastBox");
+      function showToast() {
+        let toast = document.createElement("div");
+        toast.classList.add("toast");
+        toast.innerHTML = "Success";
+        toastBox.appendChild(toast);
+      }
+    </script>
+  </body>
 </html>
