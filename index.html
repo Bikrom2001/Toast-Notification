@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toast Notification or Snack Bar</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ec6584ee5b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="buttons">
-      <button onclick="showToast()">Success</button>
-      <button onclick="showToast()">Error</button>
-      <button onclick="showToast()">Invalid</button>
+      <button onclick="showToast(successMsg)">Success</button>
+      <button onclick="showToast(errorMsg)">Error</button>
+      <button onclick="showToast(invalidMsg)">Invalid</button>
     </div>
     <div id="toastBox"></div>
 
     <!-- Main js  -->
-    <script>
-      const toastBox = document.getElementById("toastBox");
-      function showToast() {
-        let toast = document.createElement("div");
-        toast.classList.add("toast");
-        toast.innerHTML = "Success";
-        toastBox.appendChild(toast);
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
